@@ -1,0 +1,27 @@
+Point-charge benchmark: Energy MAE / RMSE (eV/atom)
+Relative energies computed against the first configuration (shortest distance).
+======================================================================
+
+test1_larger_sep (n_atoms=2)
+  MACE             MAE = 1.444136e+00 eV/atom   RMSE = 1.576754e+00 eV/atom
+  MACE-POLAR       MAE = 1.758824e-03 eV/atom   RMSE = 1.881129e-03 eV/atom
+  MACE-LES         MAE = 7.182297e-04 eV/atom   RMSE = 8.267558e-04 eV/atom
+  LOREM            MAE = 4.279165e-02 eV/atom   RMSE = 4.606505e-02 eV/atom
+
+test2_larger_cell (n_atoms=2)
+  MACE             MAE = 1.725381e+00 eV/atom   RMSE = 1.845507e+00 eV/atom
+  MACE-POLAR       MAE = 1.164598e-02 eV/atom   RMSE = 1.308517e-02 eV/atom
+  MACE-LES         MAE = 7.506886e-04 eV/atom   RMSE = 8.830452e-04 eV/atom
+  LOREM            MAE = 5.912202e-01 eV/atom   RMSE = 5.994039e-01 eV/atom
+
+test4_aniso_cell (n_atoms=2)
+  MACE             MAE = 9.170823e+00 eV/atom   RMSE = 1.022131e+01 eV/atom
+  MACE-POLAR       MAE = 2.457613e+00 eV/atom   RMSE = 2.867531e+00 eV/atom
+  MACE-LES         MAE = 5.021801e-03 eV/atom   RMSE = 5.299264e-03 eV/atom
+  LOREM            MAE = 9.893541e+00 eV/atom   RMSE = 1.022143e+01 eV/atom
+
+test5_1d_displaced_chain (n_atoms=4)
+  MACE             MAE = 6.143429e-01 eV/atom   RMSE = 6.634265e-01 eV/atom
+  MACE-POLAR       MAE = 1.065971e-01 eV/atom   RMSE = 1.084105e-01 eV/atom
+  MACE-LES         MAE = 3.775955e-03 eV/atom   RMSE = 4.038924e-03 eV/atom
+  LOREM            MAE = 1.087681e-01 eV/atom   RMSE = 1.185462e-01 eV/atom

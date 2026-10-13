@@ -1,0 +1,25 @@
+export OMP_NUM_THREADS=32
+mace_run_train \
+    --name="pt_charge_rmax_5_cubic_mace_polar_def_smearing" \
+    --train_file="/home/y/ycwong12/STO_electro_paper/ewald_training_data_200326/data_synthetic_pt_charge/train_set/syn_sro_80-80-80_train_ref.xyz" \
+    --valid_fraction=0.2 \
+    --enable_cueq=True \
+    --E0s="average" \
+    --atomic_multipoles_smearing_width=1.0 \
+    --compute_forces=True \
+    --config_type_weights='{"Default":1.0}' \
+    --energy_key="REF_energy" \
+    --forces_key="REF_forces" \
+    --model="PolarMACE" \
+    --hidden_irreps='32x0e + 32x1o' \
+    --r_max=5.0 \
+    --batch_size=10 \
+    --valid_batch_size=10 \
+    --seed=1000 \
+    --max_num_epochs=400 \
+    --swa \
+    --start_swa=200 \
+    --ema \
+    --ema_decay=0.99 \
+    --amsgrad \
+    --device=cuda \

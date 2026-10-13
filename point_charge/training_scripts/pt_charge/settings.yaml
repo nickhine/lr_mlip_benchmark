@@ -1,0 +1,19 @@
+train: "pt_charge_pbc_data/train"
+valid: "pt_charge_pbc_data/valid"
+seed: 1000
+batcher:
+  batch_size: 10
+  coarse_strategy: powers_of_4
+  size_strategy: powers_of_4
+  fine_strategy: powers_of_4
+loss_weights: {"energy": 1.0, "forces": 1.0}
+checkpointers: full
+optimizer: muon
+valid_every_epoch: 1
+decay_style: warmup_cosine
+warmup_epochs: 0
+start_learning_rate: 2e-4
+max_epochs: 400
+benchmark_pipeline: True
+use_wandb: False
+worker_count: 2

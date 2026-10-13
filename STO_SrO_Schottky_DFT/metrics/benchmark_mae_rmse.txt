@@ -1,0 +1,79 @@
+DFT_STO_SrO_vac_v2_isam benchmark [cubic]: MAE / RMSE
+Energy: relative energies (referenced to the first configuration,
+        shortest distance, ascending sort), per atom -> eV/atom.
+Forces: component-wise over all configurations and atoms -> eV/A.
+rel  =  MAE / dE_ref  (and RMSE / dE_ref), where the DFT reference
+        span dE_ref = max(E_ref) - min(E_ref). Dimensionless: the
+        per-atom normalisation cancels, so it is the error measured
+        against how much the DFT energy actually varies.
+======================================================================
+
+1d_strain_5_5_5  —  1D Strain — 5×5×5 Strain Structures
+  (n_configs=5, n_atoms=625)
+  DFT reference span dE_ref = 1.102568e+02 eV (1.764108e-01 eV/atom)
+  Energy (eV/atom)
+    MACE             MAE = 1.204679e-03 eV/atom   RMSE = 1.670946e-03 eV/atom   rel MAE =  0.6829%   rel RMSE =  0.9472%
+    MACE-POLAR       MAE = 6.871433e-04 eV/atom   RMSE = 9.530310e-04 eV/atom   rel MAE =  0.3895%   rel RMSE =  0.5402%
+    MACE-LES         MAE = 9.047944e-04 eV/atom   RMSE = 1.187669e-03 eV/atom   rel MAE =  0.5129%   rel RMSE =  0.6732%
+    LOREM            MAE = 6.720999e-04 eV/atom   RMSE = 8.137272e-04 eV/atom   rel MAE =  0.3810%   rel RMSE =  0.4613%
+  Forces (eV/A)
+    MACE             MAE = 2.019512e-07 eV/A      RMSE = 3.311246e-07 eV/A
+    MACE-POLAR       MAE = 1.811994e-07 eV/A      RMSE = 3.339873e-07 eV/A
+    MACE-LES         MAE = 1.687446e-07 eV/A      RMSE = 3.194519e-07 eV/A
+    LOREM            MAE = 2.206224e-03 eV/A      RMSE = 3.153903e-03 eV/A
+
+NOMAD_5_5_5  —  Pristine 5×5×5 MD Configurations
+  (n_configs=5, n_atoms=625)
+  DFT reference span dE_ref = 1.230758e+02 eV (1.969213e-01 eV/atom)
+  Energy (eV/atom)
+    MACE             MAE = 6.078873e-04 eV/atom   RMSE = 7.171689e-04 eV/atom   rel MAE =  0.3087%   rel RMSE =  0.3642%
+    MACE-POLAR       MAE = 7.221545e-04 eV/atom   RMSE = 9.212471e-04 eV/atom   rel MAE =  0.3667%   rel RMSE =  0.4678%
+    MACE-LES         MAE = 5.234741e-04 eV/atom   RMSE = 6.514441e-04 eV/atom   rel MAE =  0.2658%   rel RMSE =  0.3308%
+    LOREM            MAE = 1.509751e-03 eV/atom   RMSE = 1.924116e-03 eV/atom   rel MAE =  0.7667%   rel RMSE =  0.9771%
+  Forces (eV/A)
+    MACE             MAE = 2.212308e-02 eV/A      RMSE = 3.397757e-02 eV/A
+    MACE-POLAR       MAE = 1.344690e-02 eV/A      RMSE = 2.142591e-02 eV/A
+    MACE-LES         MAE = 1.361014e-02 eV/A      RMSE = 2.161701e-02 eV/A
+    LOREM            MAE = 1.692220e-02 eV/A      RMSE = 2.630902e-02 eV/A
+
+Schottky_2_3_20  —  SrO Schottky Defect — 2×3×20 Supercell
+  (n_configs=26, n_atoms=598)
+  DFT reference span dE_ref = 1.218419e+00 eV (2.037490e-03 eV/atom)
+  Energy (eV/atom)
+    MACE             MAE = 5.374509e-04 eV/atom   RMSE = 5.575628e-04 eV/atom   rel MAE = 26.3781%   rel RMSE = 27.3652%
+    MACE-POLAR       MAE = 2.160730e-04 eV/atom   RMSE = 2.673388e-04 eV/atom   rel MAE = 10.6049%   rel RMSE = 13.1210%
+    MACE-LES         MAE = 1.463584e-04 eV/atom   RMSE = 1.741012e-04 eV/atom   rel MAE =  7.1833%   rel RMSE =  8.5449%
+    LOREM            MAE = 5.087297e-04 eV/atom   RMSE = 8.473072e-04 eV/atom   rel MAE = 24.9684%   rel RMSE = 41.5858%
+  Forces (eV/A)
+    MACE             MAE = 2.662395e-02 eV/A      RMSE = 5.829328e-02 eV/A
+    MACE-POLAR       MAE = 4.136913e-02 eV/A      RMSE = 1.347243e-01 eV/A
+    MACE-LES         MAE = 2.758037e-03 eV/A      RMSE = 5.523523e-03 eV/A
+    LOREM            MAE = 3.904841e-02 eV/A      RMSE = 1.066176e-01 eV/A
+
+Schottky_2_4_15  —  SrO Schottky Defect — 2×4×15 Supercell
+  (n_configs=31, n_atoms=598)
+  DFT reference span dE_ref = 1.280745e+00 eV (2.141713e-03 eV/atom)
+  Energy (eV/atom)
+    MACE             MAE = 3.840657e-04 eV/atom   RMSE = 3.957631e-04 eV/atom   rel MAE = 17.9326%   rel RMSE = 18.4788%
+    MACE-POLAR       MAE = 8.619595e-05 eV/atom   RMSE = 1.073205e-04 eV/atom   rel MAE =  4.0246%   rel RMSE =  5.0110%
+    MACE-LES         MAE = 1.184719e-04 eV/atom   RMSE = 1.555180e-04 eV/atom   rel MAE =  5.5316%   rel RMSE =  7.2614%
+    LOREM            MAE = 6.697882e-05 eV/atom   RMSE = 8.077599e-05 eV/atom   rel MAE =  3.1273%   rel RMSE =  3.7716%
+  Forces (eV/A)
+    MACE             MAE = 8.989115e-03 eV/A      RMSE = 1.753197e-02 eV/A
+    MACE-POLAR       MAE = 1.206849e-02 eV/A      RMSE = 3.334789e-02 eV/A
+    MACE-LES         MAE = 2.557876e-03 eV/A      RMSE = 4.786214e-03 eV/A
+    LOREM            MAE = 8.388741e-03 eV/A      RMSE = 1.612327e-02 eV/A
+
+cubic_8_8_8_relax  —  SrO Schottky Defect — 8×8×8 Supercell, relaxed
+  (n_configs=5, n_atoms=2558)
+  DFT reference span dE_ref = 1.153139e-01 eV (4.507971e-05 eV/atom)
+  Energy (eV/atom)
+    MACE             MAE = 6.022257e-05 eV/atom   RMSE = 6.733101e-05 eV/atom   rel MAE = 133.5913%   rel RMSE = 149.3599%
+    MACE-POLAR       MAE = 1.560457e-05 eV/atom   RMSE = 1.745864e-05 eV/atom   rel MAE = 34.6155%   rel RMSE = 38.7284%
+    MACE-LES         MAE = 8.625523e-06 eV/atom   RMSE = 9.698839e-06 eV/atom   rel MAE = 19.1339%   rel RMSE = 21.5149%
+    LOREM            MAE = 8.122017e-06 eV/atom   RMSE = 1.347627e-05 eV/atom   rel MAE = 18.0170%   rel RMSE = 29.8943%
+  Forces (eV/A)
+    MACE             MAE = 2.053754e-03 eV/A      RMSE = 3.116005e-03 eV/A
+    MACE-POLAR       MAE = 6.142632e-04 eV/A      RMSE = 1.341448e-03 eV/A
+    MACE-LES         MAE = 5.326426e-04 eV/A      RMSE = 1.106591e-03 eV/A
+    LOREM            MAE = 2.439700e-03 eV/A      RMSE = 3.278644e-03 eV/A

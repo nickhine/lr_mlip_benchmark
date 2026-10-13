@@ -1,0 +1,51 @@
+STO_formal_charge benchmark [cubic]: Energy MAE / RMSE (eV/atom)
+Relative energies computed against the first configuration (shortest distance).
+======================================================================
+
+test1_cubic_5x5x5 (no rattle, n_atoms=623)
+  MACE             MAE = 7.236182e-03 eV/atom   RMSE = 7.898108e-03 eV/atom
+  MACE-POLAR       MAE = 3.080462e-05 eV/atom   RMSE = 3.831949e-05 eV/atom
+  MACE-LES         MAE = 5.825975e-05 eV/atom   RMSE = 6.464623e-05 eV/atom
+  LOREM            MAE = 1.399505e-03 eV/atom   RMSE = 1.581696e-03 eV/atom
+
+test1_cubic_5x5x5 (rattle, n_atoms=623)
+  MACE             MAE = 6.681798e-03 eV/atom   RMSE = 7.403974e-03 eV/atom
+  MACE-POLAR       MAE = 2.224468e-04 eV/atom   RMSE = 2.472616e-04 eV/atom
+  MACE-LES         MAE = 8.697697e-05 eV/atom   RMSE = 1.105662e-04 eV/atom
+  LOREM            MAE = 1.576048e-03 eV/atom   RMSE = 1.785390e-03 eV/atom
+
+test2_cubic_10x10x10 (no rattle, n_atoms=4998)
+  MACE             MAE = 1.381732e-03 eV/atom   RMSE = 1.448495e-03 eV/atom
+  MACE-POLAR       MAE = 5.809981e-05 eV/atom   RMSE = 6.763466e-05 eV/atom
+  MACE-LES         MAE = 1.051574e-05 eV/atom   RMSE = 1.108812e-05 eV/atom
+  LOREM            MAE = 1.511981e-04 eV/atom   RMSE = 1.646024e-04 eV/atom
+
+test2_cubic_10x10x10 (rattle, n_atoms=4998)
+  MACE             MAE = 1.359627e-03 eV/atom   RMSE = 1.438318e-03 eV/atom
+  MACE-POLAR       MAE = 5.339092e-05 eV/atom   RMSE = 6.482628e-05 eV/atom
+  MACE-LES         MAE = 3.416641e-05 eV/atom   RMSE = 4.086399e-05 eV/atom
+  LOREM            MAE = 2.272758e-04 eV/atom   RMSE = 2.431535e-04 eV/atom
+
+test3_aniso_4x6x10 (no rattle, n_atoms=1198)
+  MACE             MAE = 6.350546e-03 eV/atom   RMSE = 6.836044e-03 eV/atom
+  MACE-POLAR       MAE = 8.437766e-05 eV/atom   RMSE = 9.794543e-05 eV/atom
+  MACE-LES         MAE = 4.594693e-05 eV/atom   RMSE = 4.983834e-05 eV/atom
+  LOREM            MAE = 5.445155e-04 eV/atom   RMSE = 6.409756e-04 eV/atom
+
+test3_aniso_4x6x10 (rattle, n_atoms=1198)
+  MACE             MAE = 7.342112e-03 eV/atom   RMSE = 7.895732e-03 eV/atom
+  MACE-POLAR       MAE = 2.556231e-04 eV/atom   RMSE = 3.223490e-04 eV/atom
+  MACE-LES         MAE = 6.298429e-05 eV/atom   RMSE = 9.145534e-05 eV/atom
+  LOREM            MAE = 8.199118e-04 eV/atom   RMSE = 8.947753e-04 eV/atom
+
+test4_aniso_6x8x12 (no rattle, n_atoms=2878)
+  MACE             MAE = 2.619880e-03 eV/atom   RMSE = 2.762724e-03 eV/atom
+  MACE-POLAR       MAE = 1.152471e-04 eV/atom   RMSE = 1.266298e-04 eV/atom
+  MACE-LES         MAE = 1.928225e-05 eV/atom   RMSE = 2.045919e-05 eV/atom
+  LOREM            MAE = 2.250281e-04 eV/atom   RMSE = 2.558321e-04 eV/atom
+
+test4_aniso_6x8x12 (rattle, n_atoms=2878)
+  MACE             MAE = 3.052565e-03 eV/atom   RMSE = 3.189939e-03 eV/atom
+  MACE-POLAR       MAE = 8.526985e-05 eV/atom   RMSE = 1.134925e-04 eV/atom
+  MACE-LES         MAE = 2.652606e-05 eV/atom   RMSE = 4.004117e-05 eV/atom
+  LOREM            MAE = 3.355348e-04 eV/atom   RMSE = 3.659297e-04 eV/atom
