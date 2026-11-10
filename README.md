@@ -124,6 +124,8 @@ The summary figure in the manuscript shows (a) 1D strain, (b) NOMAD MD, then the
 `datasets/`: DFT training set, with energies, forces and stresses.
 - `STO_SrO_vac_train.xyz`: 322 frames. Pristine and Sr–O Schottky SrTiO3 in 2×2×4, 3×5×10, 5×5×5 and 6×6×6 supercells, plus 3 isolated-atom frames (`config_type=IsolatedAtom`). `data_type` tags: 1D strain (`1d`), MD (`NOMAD`), DFT single points on Schottky structures relaxed with a MACE foundation model (`Schottky_relax_FM_DFT_SP`) and full DFT relaxations (`Schottky_relax_full`).
 
+`test_structures/<test>.xyz`: the DFT test structures for the Sr–O Schottky-pair tests (`Schottky_2_3_20`, `Schottky_2_4_15`, `cubic_8_8_8_relax`), as extended XYZ with the DFT reference energy and forces. Frame i corresponds to row i of the arrays in both `<test>_results.npz` files, and the `npz_index` tag gives that row.
+
 `dft_example/`: FHI-aims input files (`control.in`, `geometry.in`) for one representative calculation. It is a single point on a MACE-omat relaxed SrTiO3 supercell containing one Sr–O Schottky pair, the same type of calculation as the `Schottky_2_4_15` benchmark configurations.
 
 ---
@@ -146,6 +148,8 @@ Climbing-image NEB calculations for oxygen-vacancy migration in a 7 × 7 × 7 Sr
 | `ml_Ef`, `dft_Ef` | Forward barrier |
 | `ml_dE`, `dft_dE` | Reaction energy (final − initial) |
 | `e_mae`, `e_rmse`, `f_mae`, `f_rmse` | ML vs. DFT errors along the path |
+
+`neb_structures/neb_<model>_<config>.xyz`: the 11 NEB images behind each npz file, in the same order, as extended XYZ. Each image stores the structure with `dft_energy`, the model energy `<model>_energy` (e.g. `lorem_energy`, `mace_les_energy`), `reaction_coordinate` and `SrO_dist` in its header, and per-atom `dft_forces` and `<model>_forces` (eV/Å).
 
 `metrics/neb_grid_metrics.txt`: per-configuration energy and force RMSE and forward / backward barriers (DFT vs. ML, meV) for each model.
 
